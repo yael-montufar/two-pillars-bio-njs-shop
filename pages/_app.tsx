@@ -19,13 +19,19 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faLock, faTruckFast } from '@fortawesome/free-solid-svg-icons'
-import { faShieldCheck } from '@fortawesome/pro-solid-svg-icons'
-
+import { faLock, faTruckFast, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faShieldCheck, faArrowUpRightAndArrowDownLeftFromCenter, faCircleSmall } from '@fortawesome/pro-solid-svg-icons'
+import { faInstagram, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 library.add(
   faLock,
   faTruckFast,
   faShieldCheck,
+  faCheckCircle,
+  faArrowUpRightAndArrowDownLeftFromCenter,
+  faInstagram,
+  faTwitter,
+  faFacebookF,
+  faCircleSmall,
 )
 
 Builder.register('insertMenu', {
