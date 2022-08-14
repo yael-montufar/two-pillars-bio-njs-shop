@@ -77,7 +77,7 @@ const InnerLayout: React.FC<{
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div
         sx={{
           margin: `0 auto`,
@@ -90,7 +90,7 @@ const InnerLayout: React.FC<{
         <main>{children}</main>
       </div>
 
-      <Sidebar
+      {/* <Sidebar
         open={
           displaySidebar ||
           (builder.editingModel || Builder.previewingModel) ===
@@ -99,8 +99,8 @@ const InnerLayout: React.FC<{
         onClose={closeSidebar}
       >
         <CartSidebarView />
-      </Sidebar>
-      <NoSSR>
+      </Sidebar> */}
+      {/* <NoSSR>
         <FeatureBar
           title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."
           hide={Builder.isEditing ? true : acceptedCookies}
@@ -108,7 +108,7 @@ const InnerLayout: React.FC<{
             <Button onClick={() => onAcceptCookies()}>Accept cookies</Button>
           }
         />
-      </NoSSR>
+      </NoSSR> */}
     </ThemeProvider>
   )
 }
