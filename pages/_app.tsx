@@ -12,6 +12,21 @@ import '../blocks/ProductGrid/ProductGrid.builder'
 import '../blocks/CollectionView/CollectionView.builder'
 import '../blocks/ProductView/ProductView.builder'
 import '../blocks/CloudinaryImage/CloudinaryImage.builder'
+import '../blocks/FontAwesomeIcon/FontAwesomeIcon.builder'
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faLock, faTruckFast } from '@fortawesome/free-solid-svg-icons'
+import { faShieldCheck } from '@fortawesome/pro-solid-svg-icons'
+
+library.add(
+  faLock,
+  faTruckFast,
+  faShieldCheck,
+)
 
 Builder.register('insertMenu', {
   name: 'Shopify Collections Components',
@@ -34,6 +49,11 @@ Builder.register('insertMenu', {
 Builder.register('insertMenu', {
   name: 'Cloudinary Components',
   items: [{ name: 'CloudinaryImage' }],
+})
+
+Builder.register('insertMenu', {
+  name: 'Icons',
+  items: [{ name: 'FontAwesomeIcon' }],
 })
 
 const Noop: FC = ({ children }) => <>{children}</>
