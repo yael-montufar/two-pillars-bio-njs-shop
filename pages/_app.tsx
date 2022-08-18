@@ -12,7 +12,9 @@ import '../blocks/ProductGrid/ProductGrid.builder'
 import '../blocks/CollectionView/CollectionView.builder'
 import '../blocks/ProductView/ProductView.builder'
 import '../blocks/CloudinaryImage/CloudinaryImage.builder'
+
 import '../blocks/FontAwesomeIcon/FontAwesomeIcon.builder'
+import '../blocks/CustomProductBox/CustomProductBox.builder'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -60,6 +62,11 @@ Builder.register('insertMenu', {
 Builder.register('insertMenu', {
   name: 'Icons',
   items: [{ name: 'FontAwesomeIcon' }],
+})
+
+Builder.register('insertMenu', {
+  name: 'Custom Shopify Components',
+  items: [{ name: 'CustomProductBox' }],
 })
 
 const Noop: FC = ({ children }) => <>{children}</>
