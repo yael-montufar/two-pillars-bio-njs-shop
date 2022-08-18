@@ -25,6 +25,7 @@ interface Props {
 }
 
 const ProductBox: React.FC<Props> = ({
+  children,
   product,
   renderSeo,
   description = product.description,
@@ -170,6 +171,7 @@ const ProductBox: React.FC<Props> = ({
           >
             Custom Button {loading && <LoadingDots />}
           </Button>
+          {children}
         </div>
       </Grid>
     </React.Fragment>

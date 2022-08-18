@@ -38,6 +38,11 @@ restrictedRegister(
     name: 'CustomProductBox',
     image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/ereader.svg',
     description: 'Choose a product to show its details on page',
+    defaultStyles: {
+      "marginTop": `0px`,
+      "minHeight": `40px`,
+      "backgroundColor": `white`
+    },
     inputs: [
       {
         name: 'product',
@@ -55,14 +60,20 @@ restrictedRegister(
         helperText: 'Override product title from shopify',
       },
     ],
+    canHaveChildren: true,
     defaultChildren: [
       {
         '@type': '@builder.io/sdk:Element',
         component: {
           name: 'Text',
           options: {
-            text: 'I am a child text block',
+            text: 'drag and drop builder blocks into this component',
           },
+        },
+        responsiveStyles: {
+          large: {
+            textAlign: 'center',
+          }
         }
       }
     ]
