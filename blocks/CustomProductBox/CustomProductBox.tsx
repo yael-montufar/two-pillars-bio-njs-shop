@@ -19,18 +19,38 @@ import { StateProvider } from "@builder.io/react";
 interface Props {
   className?: string
   children?: any
-  product: ShopifyBuy.Product
   renderSeo?: boolean
-  description?: string
+
+  product: ShopifyBuy.Product
+  productKey?: string
+  selectionId?: number
+  isPreselected?: boolean
+  showSaveRibbon?: boolean
   title?: string
+  productShots?: {
+    image?: any
+    title?: string
+  }
+  tag?: string
+  includedItems?: {
+    copy?: string
+    bullet?: string
+  }
 }
 
 const ProductBox: React.FC<Props> = ({
   children,
-  product,
   renderSeo,
-  description = product.description,
-  title = product.title,
+
+  product,
+  productKey,
+  selectionId,
+  isPreselected,
+  showSaveRibbon,
+  title,
+  productShots,
+  tag,
+  includedItems,
 }) => {
   const [loading, setLoading] = useState(false)
   const addItem = useAddItemToCart()
@@ -87,8 +107,20 @@ const ProductBox: React.FC<Props> = ({
       )
     )
 
+  const productBoxState = {
+    product,
+    productKey,
+    selectionId,
+    isPreselected,
+    showSaveRibbon,
+    title,
+    productShots,
+    tag,
+    includedItems,
+  }
+
   return (
-    <StateProvider state={{ product }}>
+    <StateProvider state={{ productBox: productBoxState }}>
       <React.Fragment>
         {children}
       </React.Fragment>

@@ -47,17 +47,70 @@ restrictedRegister(
       {
         name: 'product',
         type: `${isDemo ? 'ShopifyStore' : 'Shopify'}ProductHandle`,
+        helperText: 'Find a Shopify product by it\'s name'
       },
       {
-        name: 'description',
-        richText: true,
-        type: 'html',
-        helperText: 'Override product description from shopify',
+        name: 'productKey',
+        type: 'string',
+      },
+      {
+        name: 'selectionId',
+        type: 'number',
+        helperText: 'Numeric identifier for product selection flow'
+      },
+      {
+        name: 'isPreselected',
+        type: 'boolean',
+        helperText: 'Set this product as the default selected product'
+      },
+      {
+        name: 'showSaveRibbon',
+        type: 'boolean',
+        helperText: 'Choose whether or not to display the \'Save $XX\' ribbon',
       },
       {
         name: 'title',
         type: 'text',
-        helperText: 'Override product title from shopify',
+        helperText: 'Product title from shopify',
+      },
+      {
+        name: 'productShots',
+        type: 'list',
+        subFields: [
+          {
+            name: 'image',
+            type: 'file',
+            allowedFileTypes: ['png'],
+          },
+          {
+            name: 'title',
+            type: 'string',
+            defaultValue: 'Jane Smith',
+          },
+        ],
+      },
+      {
+        name: 'tag',
+        type: 'richText',
+        helperText: 'Product tag text'
+      },
+      {
+        name: 'includedItems',
+        type: 'list',
+        subFields: [
+          {
+            name: 'copy',
+            type: 'richText',
+          },
+          {
+            name: 'bullet',
+            type: 'string',
+            defaultValue: 'circle-small',
+            enum: [
+              { label: 'Dot', value: 'circle-small' },
+            ]
+          },
+        ],
       },
     ],
     canHaveChildren: true,
