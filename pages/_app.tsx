@@ -15,6 +15,7 @@ import '../blocks/CloudinaryImage/CloudinaryImage.builder'
 
 import '../blocks/FontAwesomeIcon/FontAwesomeIcon.builder'
 import '../blocks/ProductCard/ProductCard.builder'
+import '../blocks/ProductCardTPS/ProductCardTPS.builder'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -64,6 +65,13 @@ Builder.register('insertMenu', {
   items: [
     { name: 'ProductCard' },
     { name: 'FontAwesomeIcon' }
+  ],
+})
+
+Builder.register('insertMenu', {
+  name: 'Trigger Point Systems',
+  items: [
+    { name: 'ProductCardTPS' },
   ],
 })
 
