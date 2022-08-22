@@ -40,7 +40,6 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({
   children,
-  renderSeo,
 
   product,
   productKey,
