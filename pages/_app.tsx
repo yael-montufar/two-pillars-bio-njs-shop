@@ -60,13 +60,11 @@ Builder.register('insertMenu', {
 })
 
 Builder.register('insertMenu', {
-  name: 'Icons',
-  items: [{ name: 'FontAwesomeIcon' }],
-})
-
-Builder.register('insertMenu', {
   name: 'Two Pillars',
-  items: [{ name: 'ProductCard' }],
+  items: [
+    { name: 'ProductCard' },
+    { name: 'FontAwesomeIcon' }
+  ],
 })
 
 const Noop: FC = ({ children }) => <>{children}</>
