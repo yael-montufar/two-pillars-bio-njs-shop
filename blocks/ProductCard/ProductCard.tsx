@@ -38,7 +38,7 @@ interface Props {
   }
 }
 
-const ProductBox: React.FC<Props> = ({
+const ProductCard: React.FC<Props> = ({
   children,
   renderSeo,
 
@@ -107,7 +107,7 @@ const ProductBox: React.FC<Props> = ({
       )
     )
 
-  const productBoxState = {
+  const productCardState = {
     product,
     productKey,
     selectionId,
@@ -120,7 +120,7 @@ const ProductBox: React.FC<Props> = ({
   }
 
   return (
-    <StateProvider state={{ productBox: productBoxState }}>
+    <StateProvider state={{ productCard: productCardState }}>
       <React.Fragment>
         {children}
       </React.Fragment>
@@ -136,7 +136,7 @@ const ProductView: React.FC<{
 }> = ({ product, ...props }) => {
   return (
     <ProductLoader product={product}>
-      {(productObject) => <ProductBox {...props} product={productObject} />}
+      {(productObject) => <ProductCard {...props} product={productObject} />}
     </ProductLoader>
   )
 }

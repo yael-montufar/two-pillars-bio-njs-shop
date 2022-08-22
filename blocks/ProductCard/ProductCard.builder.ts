@@ -6,15 +6,15 @@ const isDemo = Boolean(process.env.IS_DEMO)
 const LazyProductView = dynamic(
   () =>
     isDemo
-      ? import(`blocks/CustomProductBox/CustomProductBoxDemo`)
-      : import(`blocks/CustomProductBox/CustomProductBox`),
+      ? import(`blocks/ProductCard/ProductCardDemo`)
+      : import(`blocks/ProductCard/ProductCard`),
   { ssr: true }
 )
 
-const CustomProductBoxWithBuilderChildren = withChildren(LazyProductView)
+const ProductCardWithBuilderChildren = withChildren(LazyProductView)
 
 restrictedRegister(
-  CustomProductBoxWithBuilderChildren,
+  ProductCardWithBuilderChildren,
   {
     name: 'ProductView',
     image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/inpicture.svg',
@@ -33,9 +33,9 @@ restrictedRegister(
 )
 
 restrictedRegister(
-  CustomProductBoxWithBuilderChildren,
+  ProductCardWithBuilderChildren,
   {
-    name: 'CustomProductBox',
+    name: 'ProductCard',
     image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/ereader.svg',
     description: 'Choose a product to show its details on page',
     defaultStyles: {

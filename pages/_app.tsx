@@ -14,7 +14,7 @@ import '../blocks/ProductView/ProductView.builder'
 import '../blocks/CloudinaryImage/CloudinaryImage.builder'
 
 import '../blocks/FontAwesomeIcon/FontAwesomeIcon.builder'
-import '../blocks/CustomProductBox/CustomProductBox.builder'
+import '../blocks/ProductCard/ProductCard.builder'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -65,8 +65,8 @@ Builder.register('insertMenu', {
 })
 
 Builder.register('insertMenu', {
-  name: 'Custom Shopify Components',
-  items: [{ name: 'CustomProductBox' }],
+  name: 'Two Pillars',
+  items: [{ name: 'ProductCard' }],
 })
 
 const Noop: FC = ({ children }) => <>{children}</>
