@@ -85,7 +85,6 @@ restrictedRegister(
           {
             name: 'title',
             type: 'string',
-            defaultValue: 'Jane Smith',
           },
         ],
       },
