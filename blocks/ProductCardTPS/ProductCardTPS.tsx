@@ -119,7 +119,7 @@ const ProductCardTPS: React.FC<Props> = ({
   }
 
   return (
-    <StateProvider state={{ productCardTPS: productCardState }}>
+    <StateProvider state={{ productCardState: productCardState }}>
       <React.Fragment>
         {children}
       </React.Fragment>
