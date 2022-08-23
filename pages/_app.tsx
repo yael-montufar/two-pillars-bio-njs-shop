@@ -15,6 +15,8 @@ import '../blocks/CloudinaryImage/CloudinaryImage.builder'
 
 import '../blocks/FontAwesomeIcon/FontAwesomeIcon.builder'
 import '../blocks/ProductCard/ProductCard.builder'
+import '../blocks/ProductUpsell/ProductUpsell.builder'
+
 import '../blocks/ProductCardTPS/ProductCardTPS.builder'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -64,7 +66,8 @@ Builder.register('insertMenu', {
   name: 'Two Pillars',
   items: [
     { name: 'ProductCard' },
-    { name: 'FontAwesomeIcon' }
+    { name: 'ProductUpsell' },
+    { name: 'FontAwesomeIcon' },
   ],
 })
 
